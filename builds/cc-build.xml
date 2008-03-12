@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cc-build" default="build" basedir="checkout">
+
+    <property environment="env" />
+
+    <path id="svn.classpath">
+        <pathelement location="${env.SVNANT_HOME}/lib/svnjavahl.jar" />
+        <pathelement location="${env.SVNANT_HOME}/lib/svnant.jar" />
+        <pathelement location="${env.SVNANT_HOME}/lib/svnClientAdapter.jar" />
+    </path>
+
+    <taskdef resource="svntask.properties" classpathref="svn.classpath" />
+
+    <target name="clean" description="Removes the content of the base build directory without removing the directory itself.">
+        <echo>Deleting build directory...</echo>
+        <delete includeEmptyDirs="true">
+            <fileset dir="." includes="**/*" defaultexcludes="no" />
+        </delete>
+    </target>
+
+    <target name="build" depends="clean">
+        <!-- Checkout the latest sources -->
+        <svn>
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core/trunk" revision="HEAD" destPath="plugins/org.gamegineer.common.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.core/trunk" revision="HEAD" destPath="plugins/org.gamegineer.engine.core" />
+        </svn>
+
+        <!-- Call the target that does everything -->
+        <!--<ant antfile="build.xml" target="build-everything"/>-->
+    </target>
+</project>
