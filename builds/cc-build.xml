@@ -21,6 +21,7 @@
     <target name="build" depends="clean">
         <!-- Checkout the latest sources -->
         <svn>
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.builder/trunk" revision="HEAD" destPath="org.gamegineer.builder" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base" />
