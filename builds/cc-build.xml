@@ -23,9 +23,13 @@
         <svn>
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.builder/trunk" revision="HEAD" destPath="org.gamegineer.builder" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.feature.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.feature.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core.tests" />
         </svn>
 
         <!-- Call the target that does everything -->
