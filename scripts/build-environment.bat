@@ -9,6 +9,7 @@ SET SVN_HOME=C:\Program Files\Subversion
 SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
 SET SVNANT_HOME=C:\Program Files\svnant-1.0.0
 SET ECLIPSE_HOME=C:\Program Files\eclipse-3.3.1.1
+SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.3.1.1
 SET CCDIR=C:\PROGRA~1\cruisecontrol-2.7.1\main
 
 REM
