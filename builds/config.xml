@@ -22,7 +22,7 @@
             <htmlemail
                     buildresultsurl="http://no-location"
                     css="${env.CC_HOME}/reporting/jsp/webcontent/css/cruisecontrol.css"
-                    defaultsuffix="users.sourceforge.net"
+                    defaultsuffix="@users.sourceforge.net"
                     mailhost="${env.CC_MAIL_HOST}"
                     password="${env.CC_MAIL_PASSWORD}"
                     returnaddress="s_soloff@users.sourceforge.net"
