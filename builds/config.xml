@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cruisecontrol>
 
+    <property environment="env" toupper="true" />
+
     <project name="gamegineer" buildafterfailed="false">
         <listeners>
             <currentbuildstatuslistener file="logs/gamegineer/status.txt" />
@@ -17,6 +19,17 @@
             <merge dir="checkout/org.gamegineer.builder/I.Build/test-workspace/eclipse/results" />
         </log>
         <publishers>
+            <htmlemail
+                    buildresultsurl="http://no-location"
+                    css="${env.CC_HOME}/reporting/jsp/webcontent/css/cruisecontrol.css"
+                    defaultsuffix="users.sourceforge.net"
+                    mailhost="${env.CC_MAIL_HOST}"
+                    password="${env.CC_MAIL_PASSWORD}"
+                    returnaddress="s_soloff@users.sourceforge.net"
+                    username="${env.CC_MAIL_USERNAME}"
+                    xsldir="${env.CC_HOME}/reporting/jsp/webcontent/xsl">
+                <always address="s_soloff@users.sourceforge.net" />
+            </htmlemail>
         </publishers>
     </project>
 
