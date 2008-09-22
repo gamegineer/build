@@ -26,10 +26,10 @@
 
             <!-- Plugins -->
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/net.jcip.annotations/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/net.jcip.annotations" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.console.ui/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.console.ui" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.console.ui.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.console.ui.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.ui.console/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.ui.console.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.persistence/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence" />
