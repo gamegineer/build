@@ -26,6 +26,7 @@
 
             <!-- Plugins -->
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/net.jcip.annotations/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/net.jcip.annotations" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.apache.commons.cli/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.apache.commons.cli" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.product.console/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.product.console" />
