@@ -37,6 +37,8 @@
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.persistence/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.persistence.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.remoting/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.remoting.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.game.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.core" />
