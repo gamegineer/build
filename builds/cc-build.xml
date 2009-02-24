@@ -48,6 +48,8 @@
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.server.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.server.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.test.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.test.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.core/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core.tests" />
 
             <!-- Features -->
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base" />
@@ -62,6 +64,8 @@
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.server.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.base" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.server.feature.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.test.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.test.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.feature.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.tests" />
         </svn>
 
         <!-- Call the target that does everything -->
