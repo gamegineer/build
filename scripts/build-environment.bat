@@ -43,7 +43,9 @@ SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.7.1
 REM
 REM CruiseControl e-mail build report configuration variables.
 REM
-SET CC_MAIL_HOST=mail.isp.com
+SET CC_MAIL_HOST=smtp.isp.com
+SET CC_MAIL_PORT=25
+SET CC_MAIL_USESSL=false
 SET CC_MAIL_USERNAME=user@domain
 SET CC_MAIL_PASSWORD=password
 
