@@ -54,7 +54,7 @@
             <!-- Features -->
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.console/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.console" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.base.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.common.feature.base.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.engine.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base" />
