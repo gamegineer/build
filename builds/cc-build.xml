@@ -52,6 +52,8 @@
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.core.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core.tests" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.ui/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui" />
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.ui.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.ui.console/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.tictactoe.ui.console.tests/trunk" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console.tests" />
 
             <!-- Features -->
             <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/org.gamegineer.client.feature.base/trunk" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base" />
