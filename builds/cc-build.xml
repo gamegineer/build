@@ -14,7 +14,7 @@
     <target name="clean" description="Removes the content of the base build directory without removing the directory itself.">
         <echo level="info">Deleting build directory...</echo>
         <delete includeEmptyDirs="true">
-            <fileset dir="." includes="**/*" excludes=".svn" defaultexcludes="no" />
+            <fileset dir="." includes="**/*" defaultexcludes="no" />
         </delete>
     </target>
 
