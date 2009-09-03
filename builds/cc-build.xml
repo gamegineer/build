@@ -9,7 +9,7 @@
         <pathelement location="${env.SVNANT_HOME}/lib/svnClientAdapter.jar" />
     </path>
 
-    <taskdef resource="svntask.properties" classpathref="svn.classpath" />
+    <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpathref="svn.classpath" />
 
     <target name="clean" description="Removes the content of the base build directory without removing the directory itself.">
         <echo level="info">Deleting build directory...</echo>
@@ -22,59 +22,59 @@
         <!-- Checkout the latest sources -->
         <svn>
             <!-- Builder -->
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.builder" revision="HEAD" destPath="org.gamegineer.builder" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.builder" destPath="org.gamegineer.builder" />
 
             <!-- Plugins -->
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/net.jcip.annotations" revision="HEAD" destPath="org.gamegineer.builder/plugins/net.jcip.annotations" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.apache.commons.cli" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.apache.commons.cli" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.product.console" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.product.console" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.product.console.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.product.console.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.ui.console" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.ui.console.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.remoting" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.remoting.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.ui" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.ui" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.ui.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.ui.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.test.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.core" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.core.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.console" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.console.tests" revision="HEAD" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/net.jcip.annotations" destPath="org.gamegineer.builder/plugins/net.jcip.annotations" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.apache.commons.cli" destPath="org.gamegineer.builder/plugins/org.apache.commons.cli" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.product.console" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.product.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.product.console.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.product.console.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.ui.console" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.ui.console.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.client.ui.console.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.remoting" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.remoting.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.remoting.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.engine.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.ui" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.ui" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.ui.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.game.ui.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.server.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.test.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.core.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.console" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.ui.console.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.tictactoe.ui.console.tests" />
 
             <!-- Features -->
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.console" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.console" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.console.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.console.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.client" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.client" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.client.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.client.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.test.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.base" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.base" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.base.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.base.tests" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.client" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.client" />
-            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.client.tests" revision="HEAD" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.client.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.console" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.console" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.client.feature.console.tests" destPath="org.gamegineer.builder/features/org.gamegineer.client.feature.console.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.engine.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.engine.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.client" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.client" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.game.feature.client.tests" destPath="org.gamegineer.builder/features/org.gamegineer.game.feature.client.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.server.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.server.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.test.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.base" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.base.tests" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.client" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.client" />
+            <checkout url="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.tictactoe.feature.client.tests" destPath="org.gamegineer.builder/features/org.gamegineer.tictactoe.feature.client.tests" />
         </svn>
 
         <!-- Call the target that does everything -->
