@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM build-environment.bat
-REM Copyright 2008 Gamegineer.org
+REM Copyright 2008-2009 Gamegineer.org
 REM All rights reserved.
 REM
 REM This is a sample build environment setup script required for a
@@ -32,12 +32,12 @@ REM NOTE: The CC_HOME variable must use the short directory name because, as
 REM of CruiseControl 2.7.1, the CruiseControl startup scripts do not properly
 REM handle directory names with embedded spaces.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_05
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_16
 SET SVN_HOME=C:\Program Files\Subversion
 SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
-SET SVNANT_HOME=C:\Program Files\svnant-1.0.0
-SET ECLIPSE_HOME=C:\Program Files\eclipse-3.3.1.1
-SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.3.1.1
+SET SVNANT_HOME=C:\Program Files\svnant-1.3.0
+SET ECLIPSE_HOME=C:\Program Files\eclipse-3.5
+SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.5
 SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.7.1
 
 REM
@@ -53,6 +53,13 @@ REM
 REM END-CUSTOM-VARIABLES
 REM
 REM -------------------------------------------------------------------------
+
+REM
+REM Set Gamegineer Eclipse SDK home directory.  There should only ever be one
+REM version of the Eclipse SDK installed on the build server.  Thus, it must
+REM be the same version required to build Gamegineer.
+REM
+SET GAMEGINEER_ECLIPSE_HOME=%ECLIPSE_HOME%
 
 REM
 REM Set CruiseControl server home directory.  
