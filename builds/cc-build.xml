@@ -33,6 +33,8 @@
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence.tests" />
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core" />
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core.tests" />
+            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.product" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.product" />
+            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.product.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.product.tests" />
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.ui" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.ui" />
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.ui.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.ui.tests" />
             <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.test.core" />
