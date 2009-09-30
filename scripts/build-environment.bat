@@ -11,7 +11,7 @@ REM Windows-based Gamegineer build server.  You should download this file to
 REM your build server and customize the variable definitions between the
 REM BEGIN-CUSTOM-VARIABLES and END-CUSTOM-VARIABLES markers.  The customized
 REM file should then be archived on your server and be part of your server's
-REM bootstrapping process.
+REM startup process.
 REM
 REM =========================================================================
 
