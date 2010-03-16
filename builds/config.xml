@@ -16,7 +16,7 @@
             <ant buildfile="cc-build.xml" target="build" uselogger="true" usedebug="false" />
         </schedule>
         <log dir="logs/gamegineer">
-            <merge dir="checkout/org.gamegineer.builder/I.Build/test-workspace/eclipse/results" />
+            <merge dir="checkout/org.gamegineer.builder/I.Build/test-workspace/gamegineer/results" />
         </log>
         <publishers>
             <htmlemail
