@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM build-environment.bat
-REM Copyright 2008-2009 Gamegineer.org
+REM Copyright 2008-2010 Gamegineer.org
 REM All rights reserved.
 REM
 REM This is a sample build environment setup script required for a
@@ -53,13 +53,6 @@ REM
 REM END-CUSTOM-VARIABLES
 REM
 REM -------------------------------------------------------------------------
-
-REM
-REM Set Gamegineer Eclipse SDK home directory.  There should only ever be one
-REM version of the Eclipse SDK installed on the build server.  Thus, it must
-REM be the same version required to build Gamegineer.
-REM
-SET GAMEGINEER_ECLIPSE_HOME=%ECLIPSE_HOME%
 
 REM
 REM Set CruiseControl server home directory.  
