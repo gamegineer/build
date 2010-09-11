@@ -19,13 +19,13 @@
     </target>
 
     <target name="build" depends="clean">
+        <property name="baseUrl" value="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk" />
+        <property name="basePath" value="org.gamegineer.builder" />
+        <property name="basePluginPath" value="${basePath}/plugins" />
+        <property name="baseFeaturePath" value="${basePath}/features" />
+
         <!-- Checkout the latest sources -->
         <svn>
-            <property name="baseUrl" value="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk" />
-            <property name="basePath" value="org.gamegineer.builder" />
-            <property name="basePluginPath" value="${basePath}/plugins" />
-            <property name="baseFeaturePath" value="${basePath}/features" />
-
             <!-- Builder -->
             <export srcUrl="${baseUrl}/org.gamegineer.builder" destPath="${basePath}" />
 
