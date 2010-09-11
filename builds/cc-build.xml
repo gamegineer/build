@@ -21,39 +21,44 @@
     <target name="build" depends="clean">
         <!-- Checkout the latest sources -->
         <svn>
+            <property name="baseUrl" value="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk" />
+            <property name="basePath" value="org.gamegineer.builder" />
+            <property name="basePluginPath" value="${basePath}/plugins" />
+            <property name="baseFeaturePath" value="${basePath}/features" />
+
             <!-- Builder -->
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.builder" destPath="org.gamegineer.builder" />
+            <export srcUrl="${baseUrl}/org.gamegineer.builder" destPath="${basePath}" />
 
             <!-- Plugins -->
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/net.jcip.annotations" destPath="org.gamegineer.builder/plugins/net.jcip.annotations" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.core.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.persistence.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.persistence.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.ui" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.ui" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.ui.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.common.ui.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core.persistence.serializable" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core.persistence.serializable" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core.persistence.serializable.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core.persistence.serializable.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.core.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.core.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.net" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.net" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.net.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.net.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.product" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.product" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.product.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.product.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.ui" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.ui" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.ui.tests" destPath="org.gamegineer.builder/plugins/org.gamegineer.table.ui.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.core" destPath="org.gamegineer.builder/plugins/org.gamegineer.test.core" />
+            <export srcUrl="${baseUrl}/net.jcip.annotations" destPath="${basePluginPath}/net.jcip.annotations" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.core" destPath="${basePluginPath}/org.gamegineer.common.core" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.core.tests" destPath="${basePluginPath}/org.gamegineer.common.core.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.persistence" destPath="${basePluginPath}/org.gamegineer.common.persistence" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.persistence.tests" destPath="${basePluginPath}/org.gamegineer.common.persistence.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.ui" destPath="${basePluginPath}/org.gamegineer.common.ui" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.ui.tests" destPath="${basePluginPath}/org.gamegineer.common.ui.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.core" destPath="${basePluginPath}/org.gamegineer.table.core" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.core.persistence.serializable" destPath="${basePluginPath}/org.gamegineer.table.core.persistence.serializable" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.core.persistence.serializable.tests" destPath="${basePluginPath}/org.gamegineer.table.core.persistence.serializable.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.core.tests" destPath="${basePluginPath}/org.gamegineer.table.core.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.net" destPath="${basePluginPath}/org.gamegineer.table.net" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.net.tests" destPath="${basePluginPath}/org.gamegineer.table.net.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.product" destPath="${basePluginPath}/org.gamegineer.table.product" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.product.tests" destPath="${basePluginPath}/org.gamegineer.table.product.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.ui" destPath="${basePluginPath}/org.gamegineer.table.ui" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.ui.tests" destPath="${basePluginPath}/org.gamegineer.table.ui.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.test.core" destPath="${basePluginPath}/org.gamegineer.test.core" />
 
             <!-- Features -->
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.base.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.ui" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.ui" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.common.feature.ui.tests" destPath="org.gamegineer.builder/features/org.gamegineer.common.feature.ui.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.table.feature.base" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.feature.base.tests" destPath="org.gamegineer.builder/features/org.gamegineer.table.feature.base.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.feature.ui" destPath="org.gamegineer.builder/features/org.gamegineer.table.feature.ui" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.table.feature.ui.tests" destPath="org.gamegineer.builder/features/org.gamegineer.table.feature.ui.tests" />
-            <export srcUrl="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk/org.gamegineer.test.feature.base" destPath="org.gamegineer.builder/features/org.gamegineer.test.feature.base" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.feature.base" destPath="${baseFeaturePath}/org.gamegineer.common.feature.base" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.feature.base.tests" destPath="${baseFeaturePath}/org.gamegineer.common.feature.base.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.feature.ui" destPath="${baseFeaturePath}/org.gamegineer.common.feature.ui" />
+            <export srcUrl="${baseUrl}/org.gamegineer.common.feature.ui.tests" destPath="${baseFeaturePath}/org.gamegineer.common.feature.ui.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.feature.base" destPath="${baseFeaturePath}/org.gamegineer.table.feature.base" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.feature.base.tests" destPath="${baseFeaturePath}/org.gamegineer.table.feature.base.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.feature.ui" destPath="${baseFeaturePath}/org.gamegineer.table.feature.ui" />
+            <export srcUrl="${baseUrl}/org.gamegineer.table.feature.ui.tests" destPath="${baseFeaturePath}/org.gamegineer.table.feature.ui.tests" />
+            <export srcUrl="${baseUrl}/org.gamegineer.test.feature.base" destPath="${baseFeaturePath}/org.gamegineer.test.feature.base" />
         </svn>
 
         <!-- Call the target that does everything -->
