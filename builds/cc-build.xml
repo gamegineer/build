@@ -53,7 +53,7 @@
         </svn>
 
         <!-- Call the target that does everything -->
-        <ant antfile="build.xml" dir="org.gamegineer.builder" target="build" />
+        <ant antfile="run-build.xml" dir="org.gamegineer.builder" target="build" />
     </target>
 
 </project>
