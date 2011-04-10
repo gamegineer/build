@@ -13,7 +13,7 @@
             <svn RepositoryLocation="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
         </modificationset>
         <schedule interval="60">
-            <ant buildfile="cc-build.xml" target="build" uselogger="true" usedebug="false" />
+            <ant buildfile="cc-build.xml" target="rebuild" uselogger="true" usedebug="false" />
         </schedule>
         <log dir="logs/gamegineer">
             <merge dir="checkout/org.gamegineer.builder/I.Build/test-workspace/gamegineer/results" />
