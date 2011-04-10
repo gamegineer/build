@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="cc-build" default="build" basedir="checkout">
+<project name="cc-build" default="rebuild" basedir="checkout">
 
     <property environment="env" />
 
@@ -18,13 +18,12 @@
         </delete>
     </target>
 
-    <target name="build" depends="clean">
+    <target name="fetch">
         <property name="baseUrl" value="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/trunk" />
         <property name="basePath" value="org.gamegineer.builder" />
         <property name="basePluginPath" value="${basePath}/plugins" />
         <property name="baseFeaturePath" value="${basePath}/features" />
 
-        <!-- Checkout the latest sources -->
         <svn>
             <!-- Builder -->
             <export srcUrl="${baseUrl}/org.gamegineer.builder" destPath="${basePath}" />
@@ -60,9 +59,12 @@
             <export srcUrl="${baseUrl}/org.gamegineer.table.feature.ui.tests" destPath="${baseFeaturePath}/org.gamegineer.table.feature.ui.tests" />
             <export srcUrl="${baseUrl}/org.gamegineer.test.feature.base" destPath="${baseFeaturePath}/org.gamegineer.test.feature.base" />
         </svn>
+    </target>
 
-        <!-- Call the target that does everything -->
+    <target name="build">
         <ant antfile="run-build.xml" dir="org.gamegineer.builder" target="build" />
     </target>
+
+    <target name="rebuild" depends="clean, fetch, build" />
 
 </project>
