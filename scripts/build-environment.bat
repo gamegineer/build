@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM build-environment.bat
-REM Copyright 2008-2010 Gamegineer.org
+REM Copyright 2008-2011 Gamegineer.org
 REM All rights reserved.
 REM
 REM This is a sample build environment setup script required for a
@@ -29,16 +29,16 @@ REM
 REM Home directories of all build tools.
 REM
 REM NOTE: The CC_HOME variable must use the short directory name because, as
-REM of CruiseControl 2.7.1, the CruiseControl startup scripts do not properly
+REM of CruiseControl 2.8.4, the CruiseControl startup scripts do not properly
 REM handle directory names with embedded spaces.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_16
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_25
 SET SVN_HOME=C:\Program Files\Subversion
 SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
 SET SVNANT_HOME=C:\Program Files\svnant-1.3.0
-SET ECLIPSE_HOME=C:\Program Files\eclipse-3.5
-SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.5
-SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.7.1
+SET ECLIPSE_HOME=C:\Program Files\eclipse-3.5.2
+SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.5.2
+SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.8.4
 
 REM
 REM CruiseControl e-mail build report configuration variables.
@@ -57,12 +57,12 @@ REM -------------------------------------------------------------------------
 REM
 REM Set CruiseControl server home directory.  
 REM
-SET CCDIR=%CC_HOME%\main
+SET CCDIR=%CC_HOME%
 
 REM
 REM Update path to include all build-related binaries.
 REM
-SET PATH=%JAVA_HOME%\bin;%SVN_HOME%\bin;%ANT_HOME%\bin;%ECLIPSE_HOME%;%CCDIR%\bin;%PATH%
+SET PATH=%JAVA_HOME%\bin;%SVN_HOME%\bin;%ANT_HOME%\bin;%ECLIPSE_HOME%;%CCDIR%;%PATH%
 
 REM
 REM Alias a drive to refer to the build home directory.  We do this to avoid

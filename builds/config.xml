@@ -3,33 +3,48 @@
 
     <property environment="env" toupper="true" />
 
+    <project name="config">
+    	<listeners>
+    		<currentbuildstatuslistener file="logs/config/status.txt" />
+    	</listeners>
+    	<bootstrappers>
+    		<svnbootstrapper file="config.xml" />
+    	</bootstrappers>
+    	<schedule interval="60">
+    		<ant antWorkingDir="projects/config" target="publish" uselogger="true" />
+    	</schedule>
+    </project>
+
     <project name="gamegineer" buildafterfailed="false">
         <listeners>
             <currentbuildstatuslistener file="logs/gamegineer/status.txt" />
         </listeners>
         <bootstrappers>
+        	<svnbootstrapper file="projects/gamegineer/build.xml" />
         </bootstrappers>
         <modificationset quietperiod="60">
-            <svn RepositoryLocation="http://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
+            <svn RepositoryLocation="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
         </modificationset>
         <schedule interval="60">
-            <ant buildfile="cc-build.xml" target="rebuild" uselogger="true" usedebug="false" />
+            <ant
+            		anthome="${env.ANT_HOME}"
+            		antWorkingDir="projects/gamegineer"
+            		target="rebuild"
+            		uselogger="true" />
         </schedule>
         <log dir="logs/gamegineer">
-            <merge dir="checkout/org.gamegineer.builder/I.Build/test-workspace/gamegineer/results" />
+            <merge dir="projects/gamegineer/checkout/I.Build/test-workspace/gamegineer/results" />
         </log>
         <publishers>
             <htmlemail
                     buildresultsurl="http://no-location"
-                    css="${env.CC_HOME}/reporting/jsp/webcontent/css/cruisecontrol.css"
                     defaultsuffix="@users.sourceforge.net"
                     mailhost="${env.CC_MAIL_HOST}"
                     mailport="${env.CC_MAIL_PORT}"
                     password="${env.CC_MAIL_PASSWORD}"
                     returnaddress="s_soloff@users.sourceforge.net"
                     username="${env.CC_MAIL_USERNAME}"
-                    usessl="${env.CC_MAIL_USESSL}"
-                    xsldir="${env.CC_HOME}/reporting/jsp/webcontent/xsl">
+                    usessl="${env.CC_MAIL_USESSL}">
                 <always address="s_soloff@users.sourceforge.net" />
             </htmlemail>
         </publishers>
