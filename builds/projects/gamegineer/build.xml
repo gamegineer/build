@@ -30,8 +30,8 @@
 
     <target name="clean">
         <echo level="info">Deleting build directory...</echo>
-        <delete includeEmptyDirs="true">
-            <fileset dir="." includes="**/*" defaultexcludes="no" />
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${builderDir}" defaultexcludes="no" />
         </delete>
     </target>
 
