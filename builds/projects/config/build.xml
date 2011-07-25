@@ -22,7 +22,9 @@
 <project name="config" default="publish">
 
     <target name="publish">
-        <echo>NOT IMPLEMENTED</echo>
+		<get
+        		src="http://localhost:8080/invoke?operation=reloadConfigFile&amp;objectname=CruiseControl+Manager%3Aid%3Dunique"
+        		dest="reloadConfigFile.html" />
     </target>
 
 </project>

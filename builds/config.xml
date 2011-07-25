@@ -13,6 +13,9 @@
     	<schedule interval="60">
     		<ant antWorkingDir="projects/config" target="publish" uselogger="true" />
     	</schedule>
+    	<log>
+    		<delete every="1" unit="WEEK" ignoreSuffix="false" />
+    	</log>
     </project>
 
     <project name="gamegineer" buildafterfailed="false">
@@ -34,6 +37,7 @@
         </schedule>
         <log dir="logs/gamegineer">
             <merge dir="projects/gamegineer/checkout/I.Build/test-workspace/gamegineer/results" />
+    		<delete every="1" unit="WEEK" ignoreSuffix="false" />
         </log>
         <publishers>
             <htmlemail
