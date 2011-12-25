@@ -5,13 +5,13 @@
 
     <project name="config">
     	<listeners>
-    		<currentbuildstatuslistener file="logs/config/status.txt" />
+    		<currentbuildstatuslistener file="logs/${project.name}/status.txt" />
     	</listeners>
     	<bootstrappers>
     		<svnbootstrapper file="config.xml" />
     	</bootstrappers>
     	<schedule interval="60">
-    		<ant antWorkingDir="projects/config" target="publish" uselogger="true" />
+    		<ant antWorkingDir="projects/${project.name}" target="publish" uselogger="true" />
     	</schedule>
     	<log>
     		<delete every="1" unit="WEEK" ignoreSuffix="false" />
@@ -20,10 +20,10 @@
 
     <project name="gamegineer" buildafterfailed="false">
         <listeners>
-            <currentbuildstatuslistener file="logs/gamegineer/status.txt" />
+            <currentbuildstatuslistener file="logs/${project.name}/status.txt" />
         </listeners>
         <bootstrappers>
-        	<svnbootstrapper file="projects/gamegineer/build.xml" />
+        	<svnbootstrapper file="projects/${project.name}/build.xml" />
         </bootstrappers>
         <modificationset quietperiod="60">
             <svn RepositoryLocation="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
@@ -31,15 +31,18 @@
         <schedule interval="60">
             <ant
             		anthome="${env.ANT_HOME}"
-            		antWorkingDir="projects/gamegineer"
+            		antWorkingDir="projects/${project.name}"
             		target="rebuild"
             		uselogger="true" />
         </schedule>
-        <log dir="logs/gamegineer">
-            <merge dir="projects/gamegineer/checkout/I.Build/test-workspace/gamegineer/results" />
+        <log dir="logs/${project.name}">
+            <merge dir="projects/${project.name}/checkout/I.Build/test-workspace/gamegineer/results" />
     		<delete every="1" unit="WEEK" ignoreSuffix="false" />
         </log>
         <publishers>
+            <artifactspublisher
+            		dest="artifacts/${project.name}"
+            		dir="projects/${project.name}/checkout/I.build/artifacts" />
             <htmlemail
                     buildresultsurl="http://no-location"
                     defaultsuffix="@users.sourceforge.net"
