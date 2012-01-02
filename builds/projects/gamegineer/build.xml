@@ -66,6 +66,7 @@
             <export srcUrl="${baseSrcUrl}/org.gamegineer.test.feature.base" destPath="${builderDir}/features/org.gamegineer.test.feature.base" />
 
             <!-- Plugins -->
+            <export srcUrl="${baseSrcUrl}/javax.help" destPath="${builderDir}/plugins/javax.help" />
             <export srcUrl="${baseSrcUrl}/net.jcip.annotations" destPath="${builderDir}/plugins/net.jcip.annotations" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
