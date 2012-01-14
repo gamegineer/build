@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     build.xml
-    Copyright 2008-2011 Gamegineer.org
+    Copyright 2008-2012 Gamegineer.org
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -78,6 +78,8 @@
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable.tests" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.tests" />
+            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.help" destPath="${builderDir}/plugins/org.gamegineer.table.help" />
+            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.help.tests" destPath="${builderDir}/plugins/org.gamegineer.table.help.tests" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.net" destPath="${builderDir}/plugins/org.gamegineer.table.net" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.net.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.tests" />
             <export srcUrl="${baseSrcUrl}/org.gamegineer.table.product" destPath="${builderDir}/plugins/org.gamegineer.table.product" />
