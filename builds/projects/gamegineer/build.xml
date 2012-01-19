@@ -35,14 +35,14 @@
         </delete>
     </target>
 
-    <target name="fetch">
-        <path id="svn.classpath">
-            <pathelement location="${env.SVNANT_HOME}/lib/svnjavahl.jar" />
-            <pathelement location="${env.SVNANT_HOME}/lib/svnant.jar" />
-            <pathelement location="${env.SVNANT_HOME}/lib/svnClientAdapter.jar" />
-        </path>
-
-        <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpathref="svn.classpath" />
+    <target name="fetch" xmlns:svnant="antlib:org.tigris.subversion.svnant">
+        <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" uri="antlib:org.tigris.subversion.svnant">
+            <classpath>
+                <pathelement location="${env.SVNANT_HOME}/lib/svnjavahl.jar" />
+                <pathelement location="${env.SVNANT_HOME}/lib/svnant.jar" />
+                <pathelement location="${env.SVNANT_HOME}/lib/svnClientAdapter.jar" />
+            </classpath>
+        </typedef>
 
         <condition property="srcBranch" value="${env.GAMEGINEER_BRANCH}" else="trunk">
             <isset property="env.GAMEGINEER_BRANCH" />
@@ -50,44 +50,44 @@
         <property name="baseSrcUrl" value="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/${srcBranch}" />
         <echo level="info">Fetching from URL '${baseSrcUrl}'...</echo>
 
-        <svn>
+        <svnant:svn>
             <!-- Builder -->
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.builder" destPath="${builderDir}" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.builder" destPath="${builderDir}" />
 
             <!-- Features -->
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base" destPath="${builderDir}/features/org.gamegineer.common.feature.base" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.base.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui" destPath="${builderDir}/features/org.gamegineer.common.feature.ui" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.ui.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.base" destPath="${builderDir}/features/org.gamegineer.table.feature.base" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.table.feature.base.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.ui" destPath="${builderDir}/features/org.gamegineer.table.feature.ui" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.ui.tests" destPath="${builderDir}/features/org.gamegineer.table.feature.ui.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.test.feature.base" destPath="${builderDir}/features/org.gamegineer.test.feature.base" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base" destPath="${builderDir}/features/org.gamegineer.common.feature.base" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.base.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui" destPath="${builderDir}/features/org.gamegineer.common.feature.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.ui.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.base" destPath="${builderDir}/features/org.gamegineer.table.feature.base" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.table.feature.base.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.ui" destPath="${builderDir}/features/org.gamegineer.table.feature.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.feature.ui.tests" destPath="${builderDir}/features/org.gamegineer.table.feature.ui.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.test.feature.base" destPath="${builderDir}/features/org.gamegineer.test.feature.base" />
 
             <!-- Plugins -->
-            <export srcUrl="${baseSrcUrl}/javax.help" destPath="${builderDir}/plugins/javax.help" />
-            <export srcUrl="${baseSrcUrl}/net.jcip.annotations" destPath="${builderDir}/plugins/net.jcip.annotations" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence" destPath="${builderDir}/plugins/org.gamegineer.common.persistence" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.ui" destPath="${builderDir}/plugins/org.gamegineer.common.ui" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.common.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.common.ui.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core" destPath="${builderDir}/plugins/org.gamegineer.table.core" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.help" destPath="${builderDir}/plugins/org.gamegineer.table.help" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.help.tests" destPath="${builderDir}/plugins/org.gamegineer.table.help.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.net" destPath="${builderDir}/plugins/org.gamegineer.table.net" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.net.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.product" destPath="${builderDir}/plugins/org.gamegineer.table.product" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.product.tests" destPath="${builderDir}/plugins/org.gamegineer.table.product.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.ui" destPath="${builderDir}/plugins/org.gamegineer.table.ui" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.table.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.table.ui.tests" />
-            <export srcUrl="${baseSrcUrl}/org.gamegineer.test.core" destPath="${builderDir}/plugins/org.gamegineer.test.core" />
-        </svn>
+            <svnant:export srcUrl="${baseSrcUrl}/javax.help" destPath="${builderDir}/plugins/javax.help" />
+            <svnant:export srcUrl="${baseSrcUrl}/net.jcip.annotations" destPath="${builderDir}/plugins/net.jcip.annotations" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence" destPath="${builderDir}/plugins/org.gamegineer.common.persistence" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.ui" destPath="${builderDir}/plugins/org.gamegineer.common.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.common.ui.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.core" destPath="${builderDir}/plugins/org.gamegineer.table.core" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.persistence.serializable.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.persistence.serializable.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.core.tests" destPath="${builderDir}/plugins/org.gamegineer.table.core.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.help" destPath="${builderDir}/plugins/org.gamegineer.table.help" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.help.tests" destPath="${builderDir}/plugins/org.gamegineer.table.help.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.net" destPath="${builderDir}/plugins/org.gamegineer.table.net" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.net.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.product" destPath="${builderDir}/plugins/org.gamegineer.table.product" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.product.tests" destPath="${builderDir}/plugins/org.gamegineer.table.product.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.ui" destPath="${builderDir}/plugins/org.gamegineer.table.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.table.ui.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.test.core" destPath="${builderDir}/plugins/org.gamegineer.test.core" />
+        </svnant:svn>
     </target>
 
     <target name="rebuild">
