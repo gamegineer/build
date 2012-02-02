@@ -24,6 +24,7 @@
         </listeners>
         <bootstrappers>
         	<svnbootstrapper file="projects/${project.name}/build.xml" />
+            <svnbootstrapper file="projects/${project.name}/tools" />
         </bootstrappers>
         <modificationset quietperiod="60">
             <svn RepositoryLocation="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
