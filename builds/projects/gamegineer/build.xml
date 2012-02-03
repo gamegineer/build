@@ -23,7 +23,7 @@
 
     <property environment="env" />
     <property name="builderDir" value="checkout" />
-    <property name="java-help-home" value="tools/javahelp-2.0.5" />
+    <property name="java-help-home" value="${basedir}/tools/javahelp-2.0.5" />
 
     <target name="build">
         <ant antfile="run-build.xml" dir="${builderDir}" />
