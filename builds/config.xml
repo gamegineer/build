@@ -9,6 +9,7 @@
     	</listeners>
     	<bootstrappers>
     		<svnbootstrapper file="config.xml" />
+            <svnbootstrapper file="projects/${project.name}/build.xml" />
     	</bootstrappers>
     	<schedule interval="60">
     		<ant antWorkingDir="projects/${project.name}" target="publish" uselogger="true" />
