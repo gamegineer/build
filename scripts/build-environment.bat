@@ -62,7 +62,7 @@ SET CCDIR=%CC_HOME%
 REM
 REM Update path to include all build-related binaries.
 REM
-SET PATH=%JAVA_HOME%\bin;%SVN_HOME%\bin;%ANT_HOME%\bin;%ECLIPSE_HOME%;%CCDIR%;%PATH%
+SET PATH=%JAVA_HOME%\bin;%SVN_HOME%\bin;%ANT_HOME%\bin;%CCDIR%;%PATH%
 
 REM
 REM Alias a drive to refer to the build home directory.  We do this to avoid
