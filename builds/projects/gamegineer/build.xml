@@ -51,7 +51,12 @@
         <property name="baseSrcUrl" value="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/${srcBranch}" />
         <echo level="info">Fetching from URL '${baseSrcUrl}'...</echo>
 
-        <svnant:svn>
+        <svnant:svnSetting
+                id="svn.settings"
+                javahl="false"
+                svnkit="false" />
+
+        <svnant:svn refid="svn.settings" >
             <!-- Builder -->
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.builder" destPath="${builderDir}" />
 
