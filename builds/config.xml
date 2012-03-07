@@ -9,7 +9,9 @@
     	</listeners>
     	<bootstrappers>
     		<svnbootstrapper file="config.xml" />
+            <svnbootstrapper file="dashboard-config.xml" />
             <svnbootstrapper file="projects/${project.name}/build.xml" />
+            <svnbootstrapper file="tools" />
     	</bootstrappers>
     	<schedule interval="60">
     		<ant antWorkingDir="projects/${project.name}" target="publish" uselogger="true" />

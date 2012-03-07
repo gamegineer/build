@@ -35,7 +35,6 @@ REM
 SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_31
 SET SVN_HOME=C:\Program Files\Subversion
 SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
-SET SVNANT_HOME=C:\Program Files\svnant-1.3.0
 SET ECLIPSE_HOME=C:\Program Files\eclipse-3.7.2
 SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.7.2
 SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.8.4
@@ -53,6 +52,13 @@ REM
 REM END-CUSTOM-VARIABLES
 REM
 REM -------------------------------------------------------------------------
+
+REM
+REM Set build tools home directories.
+REM
+SET BUILD_TOOLS_HOME=%BUILD_HOME%\tools
+SET SVNANT_1_3_1_HOME=%BUILD_TOOLS_HOME%\svnant-1.3.1
+SET SVNANT_LATEST_HOME=%SVNANT_1_3_1_HOME%
 
 REM
 REM Set CruiseControl server home directory.  
