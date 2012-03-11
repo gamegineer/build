@@ -46,7 +46,7 @@
         <publishers>
             <artifactspublisher
             		dest="artifacts/${project.name}"
-            		dir="projects/${project.name}/checkout/I.build/artifacts" />
+            		dir="projects/${project.name}/checkout/I.Build/artifacts" />
             <htmlemail
                     buildresultsurl="http://no-location"
                     defaultsuffix="@users.sourceforge.net"
