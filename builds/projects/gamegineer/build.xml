@@ -88,6 +88,8 @@
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.help.tests" destPath="${builderDir}/plugins/org.gamegineer.table.help.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.net" destPath="${builderDir}/plugins/org.gamegineer.table.net" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.net.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.persistence" destPath="${builderDir}/plugins/org.gamegineer.table.persistence" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.table.persistence.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.product" destPath="${builderDir}/plugins/org.gamegineer.table.product" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.product.tests" destPath="${builderDir}/plugins/org.gamegineer.table.product.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.table.ui" destPath="${builderDir}/plugins/org.gamegineer.table.ui" />
