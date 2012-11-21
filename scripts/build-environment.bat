@@ -32,7 +32,7 @@ REM NOTE: The CC_HOME variable must use the short directory name because, as
 REM of CruiseControl 2.8.4, the CruiseControl startup scripts do not properly
 REM handle directory names with embedded spaces.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_31
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_37
 SET SVN_HOME=C:\Program Files\Subversion
 SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
 SET ECLIPSE_HOME=C:\Program Files\eclipse-3.7.2
