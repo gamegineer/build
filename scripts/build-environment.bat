@@ -23,7 +23,7 @@ REM
 REM
 REM The build's home directory.
 REM
-SET BUILD_HOME=%HOMEDRIVE%%HOMEPATH%\My Documents\build-workspace\builds
+SET BUILD_HOME=%HOMEDRIVE%%HOMEPATH%\My Documents\build-workspace
 
 REM
 REM Home directories of all build tools.
@@ -56,7 +56,7 @@ REM -------------------------------------------------------------------------
 REM
 REM Set build tools home directories.
 REM
-SET BUILD_TOOLS_HOME=%BUILD_HOME%\tools
+SET BUILD_TOOLS_HOME=%BUILD_HOME%\builds\tools
 SET ANT_CONTRIB_1_0_B3_HOME=%BUILD_TOOLS_HOME%\ant-contrib-1.0b3
 SET ANT_CONTRIB_LATEST_HOME=%ANT_CONTRIB_1_0_B3_HOME%
 SET SVNANT_1_3_1_HOME=%BUILD_TOOLS_HOME%\svnant-1.3.1
@@ -79,5 +79,6 @@ REM is located within the build user's profile.
 REM
 SUBST G: "%BUILD_HOME%" 1> nul
 G:
+CD builds
 
 ECHO Gamegineer build environment ready...
