@@ -61,6 +61,8 @@
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.builder" destPath="${builderDir}" />
 
             <!-- Features -->
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.base" destPath="${builderDir}/features/org.gamegineer.cards.feature.base" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.cards.feature.base.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base" destPath="${builderDir}/features/org.gamegineer.common.feature.base" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.base.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui" destPath="${builderDir}/features/org.gamegineer.common.feature.ui" />
@@ -74,6 +76,10 @@
             <!-- Plugins -->
             <svnant:export srcUrl="${baseSrcUrl}/javax.help" destPath="${builderDir}/plugins/javax.help" />
             <svnant:export srcUrl="${baseSrcUrl}/net.jcip.annotations" destPath="${builderDir}/plugins/net.jcip.annotations" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.core" destPath="${builderDir}/plugins/org.gamegineer.cards.core" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.core.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.core.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.persistence" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence" destPath="${builderDir}/plugins/org.gamegineer.common.persistence" />
