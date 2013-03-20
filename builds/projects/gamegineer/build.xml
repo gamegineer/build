@@ -48,7 +48,7 @@
         <condition property="srcBranch" value="${env.GAMEGINEER_BRANCH}" else="trunk">
             <isset property="env.GAMEGINEER_BRANCH" />
         </condition>
-        <property name="baseSrcUrl" value="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer/dev/${srcBranch}" />
+        <property name="baseSrcUrl" value="http://svn.code.sf.net/p/gamegineer/code/dev/${srcBranch}" />
         <echo level="info">Fetching from URL '${baseSrcUrl}'...</echo>
 
         <svnant:svnSetting

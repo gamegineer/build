@@ -30,7 +30,7 @@
             <svnbootstrapper file="projects/${project.name}/tools" />
         </bootstrappers>
         <modificationset quietperiod="60">
-            <svn RepositoryLocation="https://gamegineer.svn.sourceforge.net/svnroot/gamegineer" />
+            <svn RepositoryLocation="http://svn.code.sf.net/p/gamegineer/code" />
         </modificationset>
         <schedule interval="60">
             <ant

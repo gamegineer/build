@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM bootstrap-build-environment.bat
-REM Copyright 2008-2011 Gamegineer.org
+REM Copyright 2008-2013 Gamegineer.org
 REM All rights reserved.
 REM
 REM This is a sample build environment bootstrap script required for a
@@ -43,6 +43,6 @@ REM -------------------------------------------------------------------------
 REM
 REM Checkout the build environment files from version control.
 REM
-"%SVN_HOME%\bin\svn" co --force http://gamegineer.svn.sourceforge.net/svnroot/gamegineer/build/%BUILD_BRANCH% "%BUILD_WORKSPACE_HOME%"
+"%SVN_HOME%\bin\svn" co --force http://svn.code.sf.net/p/gamegineer/code/build/%BUILD_BRANCH% "%BUILD_WORKSPACE_HOME%"
 
 ECHO Ready to start the Gamegineer build environment.  Please execute build-environment.bat
