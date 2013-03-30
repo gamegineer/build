@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     build.xml
-    Copyright 2008-2012 Gamegineer.org
+    Copyright 2008-2013 Gamegineer.org
     All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -63,6 +63,8 @@
             <!-- Features -->
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.base" destPath="${builderDir}/features/org.gamegineer.cards.feature.base" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.cards.feature.base.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.ui" destPath="${builderDir}/features/org.gamegineer.cards.feature.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.feature.ui.tests" destPath="${builderDir}/features/org.gamegineer.cards.feature.ui.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base" destPath="${builderDir}/features/org.gamegineer.common.feature.base" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.base.tests" destPath="${builderDir}/features/org.gamegineer.common.feature.base.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.feature.ui" destPath="${builderDir}/features/org.gamegineer.common.feature.ui" />
@@ -80,6 +82,8 @@
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.core.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.persistence" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.ui" destPath="${builderDir}/plugins/org.gamegineer.cards.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.cards.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.ui.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/org.gamegineer.common.persistence" destPath="${builderDir}/plugins/org.gamegineer.common.persistence" />
