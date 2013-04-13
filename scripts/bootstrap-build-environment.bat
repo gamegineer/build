@@ -45,4 +45,4 @@ REM Checkout the build environment files from version control.
 REM
 "%SVN_HOME%\bin\svn" co --force http://svn.code.sf.net/p/gamegineer/code/build/%BUILD_BRANCH% "%BUILD_WORKSPACE_HOME%"
 
-ECHO Ready to start the Gamegineer build environment.  Please execute build-environment.bat
+ECHO Ready to start the Gamegineer build environment.  Please execute 'build-environment.bat'.
