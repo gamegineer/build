@@ -20,6 +20,14 @@
 #
 
 #
+# The build platform.  The value of each coordinate should correspond to the
+# same value used by the native Eclipse installation.
+#
+export BUILD_ARCH=x86_64
+export BUILD_OS=linux
+export BUILD_WS=gtk
+
+#
 # The build's home directory.
 #
 export BUILD_HOME=~/build-workspace

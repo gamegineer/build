@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM build-environment.bat
-REM Copyright 2008-2012 Gamegineer.org
+REM Copyright 2008-2013 Gamegineer.org
 REM All rights reserved.
 REM
 REM This is a sample build environment setup script required for a
@@ -19,6 +19,14 @@ REM -------------------------------------------------------------------------
 REM
 REM BEGIN-CUSTOM-VARIABLES
 REM
+
+REM
+REM The build platform.  The value of each coordinate should correspond to the
+REM same value used by the native Eclipse installation.
+REM
+export BUILD_ARCH=x86
+export BUILD_OS=win32
+export BUILD_WS=win32
 
 REM
 REM The build's home directory.
