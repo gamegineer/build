@@ -69,7 +69,7 @@ export SVNANT_LATEST_HOME=$SVNANT_1_3_1_HOME
 # Set CruiseControl server directories.  
 #
 export CCDIR=$CC_HOME
-export JETTY_LOGS=$BUILD_HOME/logs
+export JETTY_LOGS=$BUILD_HOME/builds/logs
 
 #
 # Update path to include all build-related binaries.
@@ -77,8 +77,8 @@ export JETTY_LOGS=$BUILD_HOME/logs
 export PATH=$JAVA_HOME/bin:$SVN_HOME/bin:$ANT_HOME/bin:$CCDIR:$PATH
 
 #
-# Change to build home directory.
+# Change to CruiseControl working directory.
 #
-cd $BUILD_HOME
+cd $BUILD_HOME/builds
 
 echo Gamegineer build environment ready...
