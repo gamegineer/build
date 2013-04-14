@@ -86,6 +86,10 @@ REM excessively long paths during builds in the event the build home directory
 REM is located within the build user's profile.
 REM
 SUBST G: "%BUILD_HOME%" 1> nul
+
+REM
+REM Change to CruiseControl working directory.
+REM
 G:
 CD builds
 
