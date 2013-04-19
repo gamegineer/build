@@ -52,6 +52,11 @@ export CC_MAIL_USERNAME=user@domain
 export CC_MAIL_PASSWORD=password
 
 #
+# The X display to use for any build tools that require a display.
+#
+export DISPLAY=:99
+
+#
 # END-CUSTOM-VARIABLES
 #
 # -------------------------------------------------------------------------
