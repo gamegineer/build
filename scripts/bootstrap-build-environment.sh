@@ -22,17 +22,17 @@
 #
 # The build's workspace directory.
 #
-export BUILD_WORKSPACE_HOME=~/build-workspace
+BUILD_WORKSPACE_HOME=~/build-workspace
 
 #
 # The branch to build.
 #
-export BUILD_BRANCH=trunk
+BUILD_BRANCH=trunk
 
 #
 # Home directories of all build bootstrap tools.
 #
-export SVN_HOME=~/tools/svn
+SVN_HOME=~/tools/svn
 
 #
 # END-CUSTOM-VARIABLES
