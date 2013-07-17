@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    build.xml
+    Copyright 2008-2013 Gamegineer.org
+    All rights reserved.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Created on Jul 15, 2013 at 8:31:56 PM.
+-->
+<project name="ant-macros">
+
+    <macrodef name="antWithJVM">
+        <attribute name="buildDir" />
+        <attribute name="buildFile" default="build.xml" />
+        <attribute name="javaHome" default="${java.home}" />
+        <attribute name="targets" default="" />
+        <sequential>
+            <java
+                    classname="org.apache.tools.ant.launch.Launcher"
+                    dir="@{buildDir}"
+                    failonerror="true"
+                    fork="true"
+                    jvm="@{javaHome}/bin/java"
+                    taskname="ant">
+                <classpath>
+                    <pathelement location="${ant.home}/lib/ant-launcher.jar" />
+                </classpath>
+                <arg value="-buildfile" />
+                <arg file="@{buildDir}/@{buildFile}" />
+                <arg line="@{targets}" />
+            </java>
+        </sequential>
+    </macrodef>
+
+</project>

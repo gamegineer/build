@@ -33,5 +33,5 @@ BUILD_SCRIPTS_HOME=~/scripts
 #
 # Start CruiseControl.
 #
-source $BUILD_SCRIPTS_HOME/build-environment.sh
+source $BUILD_SCRIPTS_HOME/cc-environment.sh
 cruisecontrol.sh

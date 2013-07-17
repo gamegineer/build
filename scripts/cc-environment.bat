@@ -2,11 +2,11 @@
 
 REM =========================================================================
 REM
-REM build-environment.bat
+REM cc-environment.bat
 REM Copyright 2008-2013 Gamegineer.org
 REM All rights reserved.
 REM
-REM This is a sample build environment setup script required for a
+REM This is a sample CruiseControl environment setup script required for a
 REM Windows-based Gamegineer build server.  You should download this file to
 REM your build server and customize the variable definitions between the
 REM BEGIN-CUSTOM-VARIABLES and END-CUSTOM-VARIABLES markers.  The customized
@@ -31,21 +31,34 @@ SET BUILD_WS=win32
 REM
 REM The build's home directory.
 REM
-SET BUILD_HOME=%HOMEDRIVE%%HOMEPATH%\My Documents\build-workspace
+SET BUILD_HOME=%HOMEDRIVE%%HOMEPATH%\My Documents\build-workspace\builds
 
 REM
-REM Home directories of all build tools.
+REM Home directories of all build tools.  These are tools used by the
+REM continuous integration environment.  Project builders should not rely on
+REM these tools being present.
 REM
 REM NOTE: The CC_HOME variable must use the short directory name because, as
 REM of CruiseControl 2.8.4, the CruiseControl startup scripts do not properly
 REM handle directory names with embedded spaces.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_37
-SET SVN_HOME=C:\Program Files\Subversion
-SET ANT_HOME=C:\Program Files\apache-ant-1.7.0
-SET ECLIPSE_HOME=C:\Program Files\eclipse-3.7.2
-SET ECLIPSE_TEST_FRAMEWORK_HOME=C:\Program Files\eclipse-test-framework-3.7.2
 SET CC_HOME=C:\PROGRA~1\cruisecontrol-2.8.4
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_45
+SET SVN_HOME=C:\Program Files\Subversion
+
+REM
+REM Home directories of all project-specific build tools.  This list can
+REM shrink or grow as the needs of all projects included in the continuous
+REM integration environment change.
+REM
+REM Technically, projects should be getting these tools from their version
+REM control repository.  However, due to size limitations, they are
+REM pre-installed in the build environment.
+REM
+SET ANT_1_7_0_HOME=C:\Program Files\apache-ant-1.7.0
+SET ECLIPSE_3_7_2_HOME=C:\Program Files\eclipse-3.7.2
+SET ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=C:\Program Files\eclipse-test-framework-3.7.2
+SET JDK_1_7_0_25_HOME=C:\Program Files\Java\jdk1.7.0_25
 
 REM
 REM CruiseControl e-mail build report configuration variables.
@@ -64,7 +77,7 @@ REM -------------------------------------------------------------------------
 REM
 REM Set build tools home directories.
 REM
-SET BUILD_TOOLS_HOME=%BUILD_HOME%\builds\tools
+SET BUILD_TOOLS_HOME=%BUILD_HOME%\tools
 SET ANT_CONTRIB_1_0_B3_HOME=%BUILD_TOOLS_HOME%\ant-contrib-1.0b3
 SET ANT_CONTRIB_LATEST_HOME=%ANT_CONTRIB_1_0_B3_HOME%
 SET SVNANT_1_3_1_HOME=%BUILD_TOOLS_HOME%\svnant-1.3.1
@@ -78,7 +91,7 @@ SET CCDIR=%CC_HOME%
 REM
 REM Update path to include all build-related binaries.
 REM
-SET PATH=%JAVA_HOME%\bin;%SVN_HOME%\bin;%ANT_HOME%\bin;%CCDIR%;%PATH%
+SET PATH=%SVN_HOME%\bin;%CCDIR%;%PATH%
 
 REM
 REM Alias a drive to refer to the build home directory.  We do this to avoid
@@ -86,11 +99,6 @@ REM excessively long paths during builds in the event the build home directory
 REM is located within the build user's profile.
 REM
 SUBST G: "%BUILD_HOME%" 1> nul
-
-REM
-REM Change to CruiseControl working directory.
-REM
 G:
-CD builds
 
 ECHO Gamegineer build environment ready...

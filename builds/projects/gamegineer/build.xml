@@ -23,10 +23,12 @@
 
     <property environment="env" />
     <property name="builderDir" value="checkout" />
-    <property name="java-help-home" value="${basedir}/tools/javahelp-2.0.5" />
+    <property name="java-home" value="${env.JDK_1_7_0_25_HOME}" />
+
+    <import file="${env.BUILD_TOOLS_HOME}/ant-macros.xml" />
 
     <target name="build">
-        <ant antfile="run-build.xml" dir="${builderDir}" />
+        <antWithJVM buildDir="${builderDir}" buildFile="run-build.xml" javaHome="${java-home}" />
     </target>
 
     <target name="clean">
