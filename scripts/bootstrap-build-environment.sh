@@ -44,4 +44,4 @@ SVN_HOME=~/tools/svn
 #
 $SVN_HOME/bin/svn co --force http://svn.code.sf.net/p/gamegineer/code/build/$BUILD_BRANCH $BUILD_WORKSPACE_HOME
 
-echo "Ready to start the Gamegineer build environment.
+echo "Ready to start the Gamegineer build environment."
