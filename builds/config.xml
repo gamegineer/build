@@ -34,7 +34,7 @@
         </modificationset>
         <schedule interval="60">
             <ant
-            		anthome="${env.ANT_1_7_0_HOME}"
+            		anthome="${env.ANT_1_9_2_HOME}"
             		antWorkingDir="projects/${project.name}"
             		target="rebuild"
             		uselogger="true" />

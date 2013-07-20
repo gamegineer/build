@@ -50,7 +50,7 @@ export SVN_HOME=~/tools/svn
 # control repository.  However, due to size limitations, they are
 # pre-installed in the build environment.
 #
-export ANT_1_7_0_HOME=~/tools/apache-ant-1.7.0
+export ANT_1_9_2_HOME=~/tools/apache-ant-1.9.2
 export ECLIPSE_3_7_2_HOME=~/tools/eclipse-3.7.2
 export ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=~/tools/eclipse-test-framework-3.7.2
 export JDK_1_7_0_25_HOME=~/tools/jdk1.7.0_25
