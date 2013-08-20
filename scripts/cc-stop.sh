@@ -5,7 +5,7 @@
 # Copyright 2008-2013 Gamegineer.org
 # All rights reserved.
 #
-# This is a sample build environment stop script required for a
+# This is a sample CruiseControl environment stop script required for a
 # Linux-based Gamegineer build server.  You should download this file to
 # your build server and customize the variable definitions between the
 # BEGIN-CUSTOM-VARIABLES and END-CUSTOM-VARIABLES markers.  The customized
@@ -33,5 +33,5 @@ BUILD_SCRIPTS_HOME=~/scripts
 #
 # Start CruiseControl.
 #
-source $BUILD_SCRIPTS_HOME/build-environment.sh
+source $BUILD_SCRIPTS_HOME/cc-environment.sh
 curl "http://localhost:8000/invoke?operation=halt&objectname=CruiseControl+Manager%3Aid%3Dunique"

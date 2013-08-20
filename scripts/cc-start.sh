@@ -5,7 +5,7 @@
 # Copyright 2008-2013 Gamegineer.org
 # All rights reserved.
 #
-# This is a sample build environment start script required for a
+# This is a sample CruiseControl environment start script required for a
 # Linux-based Gamegineer build server.  You should download this file to
 # your build server and customize the variable definitions between the
 # BEGIN-CUSTOM-VARIABLES and END-CUSTOM-VARIABLES markers.  The customized
