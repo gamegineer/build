@@ -98,5 +98,3 @@ export PATH=$SVN_HOME/bin:$CCDIR:$PATH
 # Change to CruiseControl working directory.
 #
 cd $BUILD_HOME
-
-echo Gamegineer build environment ready...

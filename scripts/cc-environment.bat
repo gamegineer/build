@@ -101,4 +101,7 @@ REM
 SUBST G: "%BUILD_HOME%" 1> nul
 G:
 
-ECHO Gamegineer build environment ready...
+ECHO CruiseControl Environment
+ECHO.
+ECHO Type 'cruisecontrol.bat' to start CruiseControl.  Once started, use the
+ECHO JMX console to stop CruiseControl.
