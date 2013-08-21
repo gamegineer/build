@@ -59,6 +59,7 @@ SET ANT_1_9_2_HOME=C:\Program Files\apache-ant-1.9.2
 SET ECLIPSE_3_7_2_HOME=C:\Program Files\eclipse-3.7.2
 SET ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=C:\Program Files\eclipse-test-framework-3.7.2
 SET JDK_1_7_0_25_HOME=C:\Program Files\Java\jdk1.7.0_25
+SET MAVEN_3_0_5_HOME=C:\Program Files\apache-maven-3.0.5
 
 REM
 REM CruiseControl e-mail build report configuration variables.

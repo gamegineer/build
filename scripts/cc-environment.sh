@@ -54,6 +54,7 @@ export ANT_1_9_2_HOME=~/tools/apache-ant-1.9.2
 export ECLIPSE_3_7_2_HOME=~/tools/eclipse-3.7.2
 export ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=~/tools/eclipse-test-framework-3.7.2
 export JDK_1_7_0_25_HOME=~/tools/jdk1.7.0_25
+export MAVEN_3_0_5_HOME=~/tools/apache-maven-3.0.5
 
 #
 # CruiseControl e-mail build report configuration variables.
