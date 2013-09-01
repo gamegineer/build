@@ -2,7 +2,7 @@
 # =========================================================================
 #
 # nexus-start.sh
-# Copyright 2008-2013 Gamegineer.org
+# Copyright 2008-2013 Gamegineer contributors and others.
 # All rights reserved.
 #
 # This is a sample Nexus environment start script required for a

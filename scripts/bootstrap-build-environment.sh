@@ -2,7 +2,7 @@
 # =========================================================================
 #
 # bootstrap-build-environment.sh
-# Copyright 2008-2013 Gamegineer.org
+# Copyright 2008-2013 Gamegineer contributors and others.
 # All rights reserved.
 #
 # This is a sample build environment bootstrap script required for a
