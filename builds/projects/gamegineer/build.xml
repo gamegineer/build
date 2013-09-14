@@ -90,6 +90,9 @@
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.core.test" destPath="${builderDir}/plugins/org.gamegineer.common.core.test" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.core.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.persistence" destPath="${builderDir}/plugins/org.gamegineer.common.persistence" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.persistence.impl" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.impl" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.persistence.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.impl.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.persistence.test" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.test" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.common.persistence.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.ui" destPath="${builderDir}/plugins/org.gamegineer.common.ui" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.common.ui.tests" />
