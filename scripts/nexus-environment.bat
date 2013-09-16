@@ -24,8 +24,8 @@ REM
 REM Home directories of all required tools.  These are tools used by the
 REM Nexus environment.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_45
-SET NEXUS_HOME=C:\Program Files\nexus-2.3.1-01
+SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_25
+SET NEXUS_HOME=C:\Program Files\nexus-2.6.2-01
 
 REM
 REM END-CUSTOM-VARIABLES
@@ -35,7 +35,7 @@ REM -------------------------------------------------------------------------
 REM
 REM Update path to include all Nexus-related binaries.
 REM
-SET PATH=%NEXUS_HOME%\bin;%PATH%
+SET PATH=%JAVA_HOME%\bin;%NEXUS_HOME%\bin;%PATH%
 
 ECHO Nexus Environment
 ECHO.

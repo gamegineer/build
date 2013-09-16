@@ -23,8 +23,8 @@
 # Home directories of all required tools.  These are tools used by the
 # Nexus environment.
 #
-export JAVA_HOME=~/tools/jdk1.6.0_45
-export NEXUS_HOME=~/tools/nexus-2.3.1-01
+export JAVA_HOME=~/tools/jdk1.7.0_25
+export NEXUS_HOME=~/tools/nexus-2.6.2-01
 
 #
 # END-CUSTOM-VARIABLES
@@ -34,4 +34,4 @@ export NEXUS_HOME=~/tools/nexus-2.3.1-01
 #
 # Update path to include all Nexus-related binaries.
 #
-export PATH=$NEXUS_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$NEXUS_HOME/bin:$PATH
