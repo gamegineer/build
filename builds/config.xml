@@ -2,6 +2,7 @@
 <cruisecontrol>
 
     <property environment="env" toupper="true" />
+	<property name="scrubArtifactsScript" value="tools/ScrubArtifacts.pl" />
 
     <project name="config">
     	<listeners>
@@ -58,6 +59,7 @@
                     usessl="${env.CC_MAIL_USESSL}">
                 <always address="s_soloff@users.sourceforge.net" />
             </htmlemail>
+			<execute command="bash -c 'perl ${scrubArtifactsScript} logs/${project.name} artifacts/${project.name} run &gt; logs/${project.name}/scrub_artifacts.txt'" />
         </publishers>
     </project>
 
