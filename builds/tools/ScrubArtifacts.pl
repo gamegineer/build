@@ -116,41 +116,47 @@ print "Ignored items in $LOGDIR: @logignore\n\n" unless $RUNLEVEL eq "run";
 
 print "\nEvaluating cached log files in $LOGDIR/_cache:\n" unless $RUNLEVEL eq "run";
 
-opendir (LOGCACHE, "$LOGDIR/_cache") or die "Error: Couldn't open $LOGDIR/_cache : $!";
-while ( defined ($cacheitem = readdir(LOGCACHE)) )
+if ( opendir (LOGCACHE, "$LOGDIR/_cache") )
 {
-	print "."  unless $RUNLEVEL eq "run";
-	# Ignore unless it is a file with a sensible filename.
-	if ( ( $cacheitem =~ /^log\d{14}.*.html$/ ) && ( -f "$LOGDIR/_cache/$cacheitem") ) 
+	while ( defined ($cacheitem = readdir(LOGCACHE)) )
 	{
-
-		# We know the filename format, so just take the 14 digits comprising the timestamp
-		$cachestamp = substr ( $cacheitem, 3, 14 );
-
-		# Does it match up with any logfile? 
-		if ( index ( "@loglist", $cachestamp ) != -1 ) 
+		print "."  unless $RUNLEVEL eq "run";
+		# Ignore unless it is a file with a sensible filename.
+		if ( ( $cacheitem =~ /^log\d{14}.*.html$/ ) && ( -f "$LOGDIR/_cache/$cacheitem") ) 
 		{
-			print "KEEP $LOGDIR/_cache/$cacheitem\n" unless $RUNLEVEL eq "run";
-			$cachekeepcount++;
+
+			# We know the filename format, so just take the 14 digits comprising the timestamp
+			$cachestamp = substr ( $cacheitem, 3, 14 );
+
+			# Does it match up with any logfile? 
+			if ( index ( "@loglist", $cachestamp ) != -1 ) 
+			{
+				print "KEEP $LOGDIR/_cache/$cacheitem\n" unless $RUNLEVEL eq "run";
+				$cachekeepcount++;
+			}
+			else 
+			{
+				# Valid filename but no corresponding logfile.. delete it.
+				print "DELETE $LOGDIR/_cache/$cacheitem\n" unless $RUNLEVEL eq "run";
+				unlink ( "$LOGDIR/_cache/$cacheitem" ) unless $RUNLEVEL eq "test";
+				$cachedelcount++;
+			}
 		}
 		else 
 		{
-			# Valid filename but no corresponding logfile.. delete it.
-			print "DELETE $LOGDIR/_cache/$cacheitem\n" unless $RUNLEVEL eq "run";
-			unlink ( "$LOGDIR/_cache/$cacheitem" ) unless $RUNLEVEL eq "test";
-			$cachedelcount++;
+			# Not a valid cache file, add to the ignore list.
+			push @cacheignore, $cacheitem;
 		}
 	}
-	else 
-	{
-		# Not a valid cache file, add to the ignore list.
-		push @cacheignore, $cacheitem;
-	}
+	closedir (LOGCACHE);
+	
+	print "\n", +($cachekeepcount+$cachedelcount), " valid cache files found.\n" unless $RUNLEVEL eq "run";
+	print "Ignored items in $LOGDIR/_cache: @cacheignore\n\n" unless $RUNLEVEL eq "run";
 }
-closedir (LOGCACHE);
-
-print "\n", +($cachekeepcount+$cachedelcount), " valid cache files found.\n" unless $RUNLEVEL eq "run";
-print "Ignored items in $LOGDIR/_cache: @cacheignore\n\n" unless $RUNLEVEL eq "run";
+else
+{
+	print "Warning: Couldn't open $LOGDIR/_cache : $!";
+}
 
 # Find non-matching valid artifact directories and delete them.
 # -------------------------------------------------------------
