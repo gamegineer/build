@@ -2,24 +2,24 @@
 <cruisecontrol>
 
     <property environment="env" toupper="true" />
-	<property name="scrubArtifactsScript" value="tools/ScrubArtifacts.pl" />
+    <property name="scrubArtifactsScript" value="tools/ScrubArtifacts.pl" />
 
     <project name="config">
-    	<listeners>
-    		<currentbuildstatuslistener file="logs/${project.name}/status.txt" />
-    	</listeners>
-    	<bootstrappers>
-    		<svnbootstrapper file="config.xml" />
+        <listeners>
+            <currentbuildstatuslistener file="logs/${project.name}/status.txt" />
+        </listeners>
+        <bootstrappers>
+            <svnbootstrapper file="config.xml" />
             <svnbootstrapper file="dashboard-config.xml" />
             <svnbootstrapper file="projects/${project.name}/build.xml" />
             <svnbootstrapper file="tools" />
-    	</bootstrappers>
-    	<schedule interval="60">
-    		<ant antWorkingDir="projects/${project.name}" target="publish" uselogger="true" />
-    	</schedule>
-    	<log>
-    		<delete every="1" unit="WEEK" ignoreSuffix="false" />
-    	</log>
+        </bootstrappers>
+        <schedule interval="60">
+            <ant antWorkingDir="projects/${project.name}" target="publish" uselogger="true" />
+        </schedule>
+        <log>
+            <delete every="1" unit="WEEK" ignoreSuffix="false" />
+        </log>
     </project>
 
     <project name="gamegineer" buildafterfailed="false">
@@ -27,7 +27,7 @@
             <currentbuildstatuslistener file="logs/${project.name}/status.txt" />
         </listeners>
         <bootstrappers>
-        	<svnbootstrapper file="projects/${project.name}/build.xml" />
+            <svnbootstrapper file="projects/${project.name}/build.xml" />
             <svnbootstrapper file="projects/${project.name}/tools" />
         </bootstrappers>
         <modificationset quietperiod="60">
@@ -35,19 +35,19 @@
         </modificationset>
         <schedule interval="60">
             <ant
-            		anthome="${env.ANT_1_9_2_HOME}"
-            		antWorkingDir="projects/${project.name}"
-            		target="rebuild"
-            		uselogger="true" />
+                    anthome="${env.ANT_1_9_2_HOME}"
+                    antWorkingDir="projects/${project.name}"
+                    target="rebuild"
+                    uselogger="true" />
         </schedule>
         <log dir="logs/${project.name}">
             <merge dir="projects/${project.name}/checkout/I.Build/test-workspace/gamegineer/results" />
-    		<delete every="1" unit="WEEK" ignoreSuffix="false" />
+            <delete every="1" unit="WEEK" ignoreSuffix="false" />
         </log>
         <publishers>
             <artifactspublisher
-            		dest="artifacts/${project.name}"
-            		dir="projects/${project.name}/checkout/I.Build/artifacts" />
+                    dest="artifacts/${project.name}"
+                    dir="projects/${project.name}/checkout/I.Build/artifacts" />
             <htmlemail
                     buildresultsurl="http://no-location"
                     defaultsuffix="@users.sourceforge.net"
@@ -59,7 +59,7 @@
                     usessl="${env.CC_MAIL_USESSL}">
                 <always address="s_soloff@users.sourceforge.net" />
             </htmlemail>
-			<execute command="bash -c 'perl ${scrubArtifactsScript} logs/${project.name} artifacts/${project.name} run &gt; logs/${project.name}/scrub_artifacts.txt'" />
+            <execute command="bash -c 'perl ${scrubArtifactsScript} logs/${project.name} artifacts/${project.name} run &gt; logs/${project.name}/scrub_artifacts.txt'" />
         </publishers>
     </project>
 
