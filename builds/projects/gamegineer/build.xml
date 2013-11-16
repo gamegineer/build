@@ -109,6 +109,10 @@
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.help.impl" destPath="${builderDir}/plugins/org.gamegineer.table.help.impl" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.help.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.table.help.impl.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net" destPath="${builderDir}/plugins/org.gamegineer.table.net" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net.impl" destPath="${builderDir}/plugins/org.gamegineer.table.net.impl" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.impl.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net.test" destPath="${builderDir}/plugins/org.gamegineer.table.net.test" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net.test.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.test.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.net.tests" destPath="${builderDir}/plugins/org.gamegineer.table.net.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.persistence" destPath="${builderDir}/plugins/org.gamegineer.table.persistence" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.table.persistence.tests" />
