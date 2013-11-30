@@ -119,6 +119,10 @@
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.product" destPath="${builderDir}/plugins/org.gamegineer.table.product" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.product.tests" destPath="${builderDir}/plugins/org.gamegineer.table.product.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui" destPath="${builderDir}/plugins/org.gamegineer.table.ui" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui.impl" destPath="${builderDir}/plugins/org.gamegineer.table.ui.impl" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.table.ui.impl.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui.test" destPath="${builderDir}/plugins/org.gamegineer.table.ui.test" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui.test.tests" destPath="${builderDir}/plugins/org.gamegineer.table.ui.test.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/table/org.gamegineer.table.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.table.ui.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/test/org.gamegineer.test.core" destPath="${builderDir}/plugins/org.gamegineer.test.core" />
             <svnant:export srcUrl="${baseSrcUrl}/main/third-party/javax.help" destPath="${builderDir}/plugins/javax.help" />
