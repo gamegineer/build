@@ -79,6 +79,8 @@
 
             <!-- Plugins -->
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.core" destPath="${builderDir}/plugins/org.gamegineer.cards.core" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.core.impl" destPath="${builderDir}/plugins/org.gamegineer.cards.core.impl" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.core.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.core.impl.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.core.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.persistence" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence" />
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence.tests" />
