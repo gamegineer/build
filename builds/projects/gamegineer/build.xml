@@ -84,8 +84,8 @@
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.core.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.core.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.persistence" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence" />
             <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.persistence.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.persistence.tests" />
-            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.ui" destPath="${builderDir}/plugins/org.gamegineer.cards.ui" />
-            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.ui.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.ui.tests" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.ui.impl" destPath="${builderDir}/plugins/org.gamegineer.cards.ui.impl" />
+            <svnant:export srcUrl="${baseSrcUrl}/main/cards/org.gamegineer.cards.ui.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.cards.ui.impl.tests" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.core" destPath="${builderDir}/plugins/org.gamegineer.common.core" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.core.impl" destPath="${builderDir}/plugins/org.gamegineer.common.core.impl" />
             <svnant:export srcUrl="${baseSrcUrl}/main/common/org.gamegineer.common.core.impl.tests" destPath="${builderDir}/plugins/org.gamegineer.common.core.impl.tests" />
