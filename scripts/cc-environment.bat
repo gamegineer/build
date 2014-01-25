@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM cc-environment.bat
-REM Copyright 2008-2013 Gamegineer contributors and others.
+REM Copyright 2008-2014 Gamegineer contributors and others.
 REM All rights reserved.
 REM
 REM This is a sample CruiseControl environment setup script required for a
@@ -56,10 +56,8 @@ REM control repository.  However, due to size limitations, they are
 REM pre-installed in the build environment.
 REM
 SET ANT_1_9_2_HOME=C:\Program Files\apache-ant-1.9.2
-SET ECLIPSE_3_7_2_HOME=C:\Program Files\eclipse-3.7.2
-SET ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=C:\Program Files\eclipse-test-framework-3.7.2
-SET JDK_1_7_0_25_HOME=C:\Program Files\Java\jdk1.7.0_25
-SET MAVEN_3_0_5_HOME=C:\Program Files\apache-maven-3.0.5
+SET JDK_1_7_0_51_HOME=C:\Program Files\Java\jdk1.7.0_51
+SET MAVEN_3_1_1_HOME=C:\Program Files\apache-maven-3.1.1
 
 REM
 REM CruiseControl e-mail build report configuration variables.

@@ -2,7 +2,7 @@
 # =========================================================================
 #
 # nexus-environment.sh
-# Copyright 2008-2013 Gamegineer contributors and others.
+# Copyright 2008-2014 Gamegineer contributors and others.
 # All rights reserved.
 #
 # This is a sample Nexus environment setup script required for a
@@ -23,7 +23,7 @@
 # Home directories of all required tools.  These are tools used by the
 # Nexus environment.
 #
-export JAVA_HOME=~/tools/jdk1.7.0_25
+export JAVA_HOME=~/tools/jdk1.7.0_51
 export NEXUS_HOME=~/tools/nexus-2.6.2-01
 
 #

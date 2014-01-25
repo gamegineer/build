@@ -2,7 +2,7 @@
 # =========================================================================
 #
 # cc-environment.sh
-# Copyright 2008-2013 Gamegineer contributors and others.
+# Copyright 2008-2014 Gamegineer contributors and others.
 # All rights reserved.
 #
 # This is a sample CruiseControl environment setup script required for a
@@ -51,10 +51,8 @@ export SVN_HOME=~/tools/svn
 # pre-installed in the build environment.
 #
 export ANT_1_9_2_HOME=~/tools/apache-ant-1.9.2
-export ECLIPSE_3_7_2_HOME=~/tools/eclipse-3.7.2
-export ECLIPSE_TEST_FRAMEWORK_3_7_2_HOME=~/tools/eclipse-test-framework-3.7.2
-export JDK_1_7_0_25_HOME=~/tools/jdk1.7.0_25
-export MAVEN_3_0_5_HOME=~/tools/apache-maven-3.0.5
+export JDK_1_7_0_51_HOME=~/tools/jdk1.7.0_51
+export MAVEN_3_1_1_HOME=~/tools/apache-maven-3.1.1
 
 #
 # CruiseControl e-mail build report configuration variables.

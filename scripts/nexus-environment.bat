@@ -3,7 +3,7 @@
 REM =========================================================================
 REM
 REM nexus-environment.bat
-REM Copyright 2008-2013 Gamegineer contributors and others.
+REM Copyright 2008-2014 Gamegineer contributors and others.
 REM All rights reserved.
 REM
 REM This is a sample Nexus environment setup script required for a
@@ -24,7 +24,7 @@ REM
 REM Home directories of all required tools.  These are tools used by the
 REM Nexus environment.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_25
+SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_51
 SET NEXUS_HOME=C:\Program Files\nexus-2.6.2-01
 
 REM
