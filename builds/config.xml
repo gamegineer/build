@@ -28,7 +28,6 @@
         </listeners>
         <bootstrappers>
             <svnbootstrapper file="projects/${project.name}/build.xml" />
-            <svnbootstrapper file="projects/${project.name}/tools" />
         </bootstrappers>
         <modificationset quietperiod="60">
             <svn RepositoryLocation="http://svn.code.sf.net/p/gamegineer/code" />
@@ -41,13 +40,13 @@
                     uselogger="true" />
         </schedule>
         <log dir="logs/${project.name}">
-            <merge dir="projects/${project.name}/checkout/I.Build/test-workspace/gamegineer/results" />
+            <merge dir="projects/${project.name}/artifacts/test-results" />
             <delete every="1" unit="WEEK" ignoreSuffix="false" />
         </log>
         <publishers>
             <artifactspublisher
                     dest="artifacts/${project.name}"
-                    dir="projects/${project.name}/checkout/I.Build/artifacts" />
+                    dir="projects/${project.name}/artifacts" />
             <htmlemail
                     buildresultsurl="http://no-location"
                     defaultsuffix="@users.sourceforge.net"
