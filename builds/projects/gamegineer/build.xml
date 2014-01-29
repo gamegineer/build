@@ -63,7 +63,7 @@
 					<equals arg1="0" arg2="${buildResult}" />
 				</not>
 			</condition>
-		<fail>
+		</fail>
 	</target>
 
 	<target name="build-target-platform">
