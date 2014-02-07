@@ -24,7 +24,6 @@
 	<property environment="env" />
 	<property name="artifactsDir" value="artifacts" />
 	<property name="checkoutDir" value="checkout" />
-	<property name="builderDir" value="checkout" />
 	<property name="javaHome" value="${env.JDK_1_7_0_51_HOME}" />
 	<property name="mavenHome" value="${env.MAVEN_3_1_1_HOME}" />
 
