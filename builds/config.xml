@@ -22,7 +22,7 @@
         </log>
     </project>
 
-    <project name="gamegineer" buildafterfailed="false">
+    <project name="gamegineer.main" buildafterfailed="false">
         <listeners>
             <currentbuildstatuslistener file="logs/${project.name}/status.txt" />
         </listeners>
@@ -47,6 +47,42 @@
             <artifactspublisher
                     dest="artifacts/${project.name}"
                     dir="projects/${project.name}/artifacts" />
+            <htmlemail
+                    buildresultsurl="http://no-location"
+                    defaultsuffix="@users.sourceforge.net"
+                    mailhost="${env.CC_MAIL_HOST}"
+                    mailport="${env.CC_MAIL_PORT}"
+                    password="${env.CC_MAIL_PASSWORD}"
+                    returnaddress="s_soloff@users.sourceforge.net"
+                    username="${env.CC_MAIL_USERNAME}"
+                    usessl="${env.CC_MAIL_USESSL}">
+                <always address="s_soloff@users.sourceforge.net" />
+            </htmlemail>
+            <execute command="bash -c 'perl ${scrubArtifactsScript} logs/${project.name} artifacts/${project.name} run &gt; logs/${project.name}/scrub_artifacts.txt'" />
+        </publishers>
+    </project>
+
+    <project name="gamegineer.site" buildafterfailed="false">
+        <listeners>
+            <currentbuildstatuslistener file="logs/${project.name}/status.txt" />
+        </listeners>
+        <bootstrappers>
+            <svnbootstrapper file="projects/${project.name}/build.xml" />
+        </bootstrappers>
+        <modificationset quietperiod="60">
+            <svn RepositoryLocation="http://svn.code.sf.net/p/gamegineer/code" />
+        </modificationset>
+        <schedule interval="86400">
+            <ant
+                    anthome="${env.ANT_1_9_2_HOME}"
+                    antWorkingDir="projects/${project.name}"
+                    target="rebuild"
+                    uselogger="true" />
+        </schedule>
+        <log dir="logs/${project.name}">
+            <delete every="1" unit="WEEK" ignoreSuffix="false" />
+        </log>
+        <publishers>
             <htmlemail
                     buildresultsurl="http://no-location"
                     defaultsuffix="@users.sourceforge.net"

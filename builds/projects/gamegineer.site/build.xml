@@ -17,14 +17,12 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-	Created on Mar 11, 2008 at 9:50:00 PM.
+	Created on Jan 31, 2014 at 8:35:00 PM.
 -->
-<project name="gamegineer" default="build" xmlns:mvn="antlib:org.apache.maven.artifact.ant">
+<project name="gamegineer.site" default="build" xmlns:mvn="antlib:org.apache.maven.artifact.ant">
 
 	<property environment="env" />
-	<property name="artifactsDir" value="artifacts" />
 	<property name="checkoutDir" value="checkout" />
-	<property name="builderDir" value="checkout" />
 	<property name="javaHome" value="${env.JDK_1_7_0_51_HOME}" />
 	<property name="mavenHome" value="${env.MAVEN_3_1_1_HOME}" />
 
@@ -35,83 +33,37 @@
 	</typedef>
 
 	<target name="build">
-		<antcall target="build-target-platform" />
-		<antcall target="build-third-party" />
+		<antcall target="build-root" />
 		<antcall target="build-main" />
 	</target>
 
-	<target name="build-main">
+	<target name="build-main" description="Generate site for main projects.">
 		<mvn:mvn
 				failonerror="false"
 				fork="true"
 				jvm="${javaHome}/bin/java"
 				mavenHome="${mavenHome}"
-				pom="${checkoutDir}/main/org.gamegineer.main/pom.xml"
-				resultproperty="buildResult">
-			<arg value="--fail-at-end" />
-			<arg value="-P" />
-			<arg value="update-javahelp-database,update-branding-plugins" />
-			<arg value="install" />
-		</mvn:mvn>
-
-		<antcall target="publish-products" />
-		<antcall target="publish-test-results" />
-
-		<fail message="The build failed.">
-			<condition>
-				<not>
-					<equals arg1="0" arg2="${buildResult}" />
-				</not>
-			</condition>
-		</fail>
-	</target>
-
-	<target name="build-target-platform">
-		<mvn:mvn
-				failonerror="true"
-				fork="true"
-				jvm="${javaHome}/bin/java"
-				mavenHome="${mavenHome}"
-				pom="${checkoutDir}/target-platform/org.gamegineer.target-platform/pom.xml">
-			<arg value="deploy" />
+				pom="${checkoutDir}/main/org.gamegineer.main/pom.xml">
+			<arg value="site-deploy" />
 		</mvn:mvn>
 	</target>
 
-	<target name="build-third-party">
+	<target name="build-root" description="Generate site for root project.">
 		<mvn:mvn
-				failonerror="true"
+				failonerror="false"
 				fork="true"
 				jvm="${javaHome}/bin/java"
 				mavenHome="${mavenHome}"
-				pom="${checkoutDir}/third-party/org.gamegineer.third-party/pom.xml">
-			<arg value="deploy" />
+				pom="${checkoutDir}/org.gamegineer/pom.xml">
+			<arg value="site-deploy" />
 		</mvn:mvn>
 	</target>
 
 	<target name="clean">
 		<echo level="info">Deleting build directory...</echo>
 		<delete includeEmptyDirs="true" quiet="true">
-			<fileset dir="${artifactsDir}" defaultexcludes="no" />
 			<fileset dir="${checkoutDir}" defaultexcludes="no" />
 		</delete>
-	</target>
-
-	<target name="publish-products">
-		<copy todir="${artifactsDir}/products">
-			<fileset dir="${checkoutDir}">
-				<include name="**/target/products/*.zip" />
-			</fileset>
-			<flattenmapper />
-		</copy>
-	</target>
-
-	<target name="publish-test-results">
-		<copy todir="${artifactsDir}/test-results">
-			<fileset dir="${checkoutDir}">
-				<include name="**/target/surefire-reports/*.xml" />
-			</fileset>
-			<flattenmapper />
-		</copy>
 	</target>
 
 	<target name="fetch" xmlns:svnant="antlib:org.tigris.subversion.svnant">
