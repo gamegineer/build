@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
- <dashboard>
-	<buildloop artifactsdir="" logsdir=""  />
-	<features allowforcebuild="" />
-	<trackingtool baseurl="" keywords="" projectname="" />
-	<subtabs>
-		<subtab class="net.sourceforge.cruisecontrol.dashboard.widgets.ErrorsAndWarningsMessagesWidget" />
-	</subtabs>
-</dashboard>

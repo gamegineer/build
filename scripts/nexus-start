@@ -1,16 +1,16 @@
 #!/bin/bash
 # =========================================================================
 #
-# cc-stop.sh
-# Copyright 2008-2013 Gamegineer contributors and others.
+# nexus-start
+# Copyright 2008-2014 Gamegineer contributors and others.
 # All rights reserved.
 #
-# This is a sample CruiseControl environment stop script required for a
+# This is a sample Nexus environment start script required for a
 # Linux-based Gamegineer build server.  You should download this file to
 # your build server and customize the variable definitions between the
 # BEGIN-CUSTOM-VARIABLES and END-CUSTOM-VARIABLES markers.  The customized
 # file should then be archived on your server and be part of your server's
-# shutdown process.
+# startup process.
 #
 # =========================================================================
 
@@ -31,7 +31,7 @@ BUILD_SCRIPTS_HOME=~/scripts
 # -------------------------------------------------------------------------
 
 #
-# Start CruiseControl.
+# Start Nexus.
 #
-source $BUILD_SCRIPTS_HOME/cc-environment.sh
-curl "http://localhost:8000/invoke?operation=halt&objectname=CruiseControl+Manager%3Aid%3Dunique"
+source $BUILD_SCRIPTS_HOME/nexus-environment.sh
+nexus start

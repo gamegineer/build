@@ -23,7 +23,7 @@
 # Home directories of all required tools.  These are tools used by the
 # Nexus environment.
 #
-export JAVA_HOME=~/tools/jdk1.7.0_51
+export JAVA_HOME=~/tools/jre1.7.0_60
 export NEXUS_HOME=~/tools/nexus-2.6.2-01
 
 #

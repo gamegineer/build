@@ -24,7 +24,7 @@ REM
 REM Home directories of all required tools.  These are tools used by the
 REM Nexus environment.
 REM
-SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_51
+SET JAVA_HOME=C:\Program Files\Java\jre1.7.0_60
 SET NEXUS_HOME=C:\Program Files\nexus-2.6.2-01
 
 REM

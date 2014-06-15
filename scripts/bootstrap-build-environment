@@ -1,8 +1,8 @@
 #!/bin/bash
 # =========================================================================
 #
-# bootstrap-build-environment.sh
-# Copyright 2008-2013 Gamegineer contributors and others.
+# bootstrap-build-environment
+# Copyright 2008-2014 Gamegineer contributors and others.
 # All rights reserved.
 #
 # This is a sample build environment bootstrap script required for a
@@ -30,11 +30,6 @@ BUILD_WORKSPACE_HOME=~/build-workspace
 BUILD_BRANCH=trunk
 
 #
-# Home directories of all build bootstrap tools.
-#
-SVN_HOME=~/tools/svn
-
-#
 # END-CUSTOM-VARIABLES
 #
 # -------------------------------------------------------------------------
@@ -42,6 +37,6 @@ SVN_HOME=~/tools/svn
 #
 # Checkout the build environment files from version control.
 #
-$SVN_HOME/bin/svn co --force http://svn.code.sf.net/p/gamegineer/code/build/$BUILD_BRANCH $BUILD_WORKSPACE_HOME
+svn co --force http://svn.code.sf.net/p/gamegineer/code/build/$BUILD_BRANCH $BUILD_WORKSPACE_HOME
 
 echo "Ready to start the Gamegineer build environment."
