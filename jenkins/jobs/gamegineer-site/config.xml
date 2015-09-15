@@ -30,6 +30,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>JDK 1.8.0_60</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
       <spec>H 0 * * *</spec>
