@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -27,7 +27,9 @@
     <extensions>
       <hudson.plugins.git.extensions.impl.CloneOption>
         <shallow>true</shallow>
+        <noTags>false</noTags>
         <reference></reference>
+        <depth>0</depth>
       </hudson.plugins.git.extensions.impl.CloneOption>
       <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
     </extensions>
@@ -46,7 +48,7 @@
   <builders>
     <hudson.tasks.Maven>
       <targets>deploy</targets>
-      <mavenName>Maven 3.3.3</mavenName>
+      <mavenName>Maven 3.3.9</mavenName>
       <pom>target-platform/org.gamegineer.target-platform/pom.xml</pom>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -54,7 +56,7 @@
     </hudson.tasks.Maven>
     <hudson.tasks.Maven>
       <targets>deploy</targets>
-      <mavenName>Maven 3.3.3</mavenName>
+      <mavenName>Maven 3.3.9</mavenName>
       <pom>third-party/org.gamegineer.third-party/pom.xml</pom>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -62,7 +64,7 @@
     </hudson.tasks.Maven>
     <hudson.tasks.Maven>
       <targets>--fail-at-end -P code-coverage,update-javahelp-database,update-branding-plugins install</targets>
-      <mavenName>Maven 3.3.3</mavenName>
+      <mavenName>Maven 3.3.9</mavenName>
       <pom>main/org.gamegineer.main/pom.xml</pom>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -77,12 +79,13 @@
       <fingerprint>false</fingerprint>
       <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.9">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.20">
       <testResults>**/target/surefire-reports/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.plugins.jacoco.JacocoPublisher plugin="jacoco@2.0.0">
+    <hudson.plugins.jacoco.JacocoPublisher plugin="jacoco@2.0.1">
       <execPattern>**/target/jacoco.exec</execPattern>
       <classPattern>**/target/classes</classPattern>
       <sourcePattern>**/src</sourcePattern>
@@ -102,8 +105,8 @@
       <maximumClassCoverage>0</maximumClassCoverage>
       <changeBuildStatus>false</changeBuildStatus>
     </hudson.plugins.jacoco.JacocoPublisher>
-    <hudson.tasks.Mailer plugin="mailer@1.16">
-      <recipients>s_soloff@yahoo.com</recipients>
+    <hudson.tasks.Mailer plugin="mailer@1.17">
+      <recipients>steven.soloff@gmail.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
